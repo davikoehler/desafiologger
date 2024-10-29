@@ -1,0 +1,11 @@
+services:
+  php:
+    container_name: app
+    image: webdevops/php-nginx-dev:8.3-alpine
+    environment:
+      - PHP_DISPLAY_ERRORS=1
+      - WEB_DOCUMENT_ROOT=/app/
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
